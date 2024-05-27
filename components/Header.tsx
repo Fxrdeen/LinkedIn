@@ -1,3 +1,4 @@
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import {
   Briefcase,
   HomeIcon,
@@ -8,6 +9,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { Button } from "./ui/button";
 
 function Header() {
   return (
@@ -46,6 +48,14 @@ function Header() {
           <MessageSquare className="h-5 " />
           <p>Messaging</p>
         </Link>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
+        <SignedOut>
+          <Button asChild variant={"secondary"}>
+            <SignInButton />
+          </Button>
+        </SignedOut>
       </div>
     </div>
   );
