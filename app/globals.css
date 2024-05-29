@@ -6,6 +6,9 @@
   .icon {
     @apply flex flex-col items-center justify-center text-sm font-light;
   }
+  .postButton {
+    @apply flex justify-center flex-1;
+  }
 }
 
 @layer base {

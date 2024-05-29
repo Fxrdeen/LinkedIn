@@ -27,7 +27,9 @@ interface IPostStatics {
   getAllPosts(): Promise<IPostDocument[]>;
 }
 
-export interface IPostDocument extends IPostBase, IPostMethods {}
+export interface IPostDocument extends IPostBase, IPostMethods {
+  createdAt: string | number | Date;
+}
 interface IPostModel extends IPostStatics, Model<IPostDocument> {}
 
 const PostSchema: Schema = new Schema<IPostDocument>(

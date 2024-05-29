@@ -1,3 +1,4 @@
+import PostFeed from "@/components/PostFeed";
 import PostForm from "@/components/PostForm";
 import UserInformation from "@/components/UserInformation";
 import connectDB from "@/mongodb/db";
@@ -16,6 +17,7 @@ export default async function Home() {
         <SignedIn>
           <PostForm />
         </SignedIn>
+        <PostFeed posts={posts} />
       </section>
       <section className="hidden xl:inline justify-center col-span-2"></section>
     </div>
